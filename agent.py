@@ -67,7 +67,7 @@ async def main() -> None:
         #   beeai_framework.backend.errors.ChatModelError: The model was required 
         #   to produce a tool call for the 'think' tool, but no tool calls were generated.
         # To mitigate this, always upgrade to latest beeai and pray to the AI gods.
-        llm=ChatModel.from_name(chat_model, tool_choice_support={"auto", "none", "required"}),
+        llm=ChatModel.from_name(chat_model, tool_choice_support={"auto", }),
         tools=[ThinkTool(), ViewFileTool()],
         instructions=INSTRUCTIONS,
         requirements=[
